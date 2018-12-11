@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User List</h1>
+        <span id="btnCreateUser" class = "my-button"><i class="fas fa-user-plus"></i></span>
+
+        <div class="users-div">
+            <table id="users-table">
+                <!--
+                <tr>
+                    <td class="first-name">
+
+                    </td>
+                    <td class="last-name">
+
+                    </td>
+                    <td class="avatar">
+
+                    </td>
+                    <td class="edit">
+                        <button id="openEditModal">Edit User</button>
+                    </td>
+                    <td class="delete">
+                        <button id="deleteUser">Delete User</button>
+                    </td>
+                </tr>
+                -->
+            </table>
+        <!--Modal Edit-->
+            <div id="editModal" class="modal">
+                <div class="modal-content">                    
+                    <form id="edit-form">
+                        <div class="form-group">
+                            <label for="nameEInput"  class="form-label">Name</label>
+                            <input type="text" id="nameEInput" class="form-input" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="jobEInput" class="form-label">Job</label>
+                            <input type="text" id="jobEInput" class="form-input" placeholder="Job">
+                        </div>
+                        <span id="submitEForm" class = "my-button"><i class="fas fa-plus-circle"></i></span>  
+                    </form>
+                    <span class = "closeModal my-button"><i class="fas fa-times-circle"></i></span>
+                </div>
+            </div>
+
+            <!--Modal Create-->
+            <div id="createModal" class="modal">
+                <div class="modal-content">                    
+                    <form id="add-form">
+                        <div class="form-group">
+                            <label for="nameCInput" class="form-label">Name</label>
+                            <input type="text" id="nameCInput" class="form-input" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="jobCInput"  class="form-label">Job</label>
+                            <input type="text" id="jobCInput" class="form-input" placeholder="Job">
+                        </div>
+                        <span id="submitCForm" class = "my-button"><i class="fas fa-plus-circle"></i></span>                     
+                    </form>
+                    <span class = "closeModal my-button"><i class="fas fa-times-circle"></i></span>
+                </div>
+            </div>
+        </div>  
+
+    </div>
+    <script src="api.js"></script>
+    <script src="ui.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
